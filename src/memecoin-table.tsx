@@ -54,7 +54,7 @@ export default function MemecoinTable() {
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
-          {memecoins.map((coin) => (
+          {memecoins.length > 0 ? memecoins.map((coin) => (
             <tr key={coin.id} className="hover:bg-gray-50">
               <td className="px-6 py-4 whitespace-nowrap">
                 <div className="flex items-center">
@@ -69,7 +69,7 @@ export default function MemecoinTable() {
                 {coin.price_change_percentage_24h.toFixed(2)}%
               </td>
             </tr>
-          ))}
+          )) : null}
         </tbody>
       </table>
     </div>
